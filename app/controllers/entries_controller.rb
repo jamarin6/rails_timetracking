@@ -2,6 +2,8 @@ class EntriesController < ApplicationController
 	def index
 		@project = Project.find params[:project_id]
 		@entries = @project.entries
+
+		render 'index', layout: 'project'
 	end
 
 	def global_index

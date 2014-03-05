@@ -5,7 +5,7 @@
 	  <% if project.description.blank? %>
 	    <li><%= project.name %></li>
 	  <% else %>
-	    <li><%= project.name %> - <%= project.description %></li>  
+	    <li><%= link_to(project.name, project_entries_path(project)) %> - <%= project.description %></li>  
 	    <!-- con el = xq es lo q se imprime x pantalla-->
 	  <% end %>
   <% end %>

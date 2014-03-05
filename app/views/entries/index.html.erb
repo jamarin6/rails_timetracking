@@ -11,4 +11,5 @@
   </ul>
 
   <p>---------------------Total time: <%=  pluralize(@project.calculate_amount_hours(Date.today.month, Date.today.year), 'hour', 'hours') %>---------------------</p>
+  <p>---<%=link_to('HOME', '/') %>---</p>
   <!-- pluralize hace q si es 1 la cantidad t ponga el singular(primer caso hour) y 2º en caso plural-->
