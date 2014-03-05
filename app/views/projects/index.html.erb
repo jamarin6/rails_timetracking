@@ -1,0 +1,14 @@
+
+<ul>
+  <% @projects.each do |project| %>
+
+	  <% if project.description.blank? %>
+	    <li><%= project.name %></li>
+	  <% else %>
+	    <li><%= project.name %> - <%= project.description %></li>  
+	    <!-- con el = xq es lo q se imprime x pantalla-->
+	  <% end %>
+  <% end %>
+</ul>
+	
+  

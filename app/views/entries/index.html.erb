@@ -1,0 +1,14 @@
+<h1><%= @project.name %></h1>
+  <ul>
+    <% @entries.each do |entry| %>
+	  	<li>
+	  	<%= entry.hours %> hr
+	  	<%= entry.minutes %> min -
+	  	comment: <%= entry.comments %> 
+	  	<%= entry.date %>
+		</li>
+	<% end %>
+  </ul>
+
+  <p>---------------------Total time: <%=  pluralize(@project.calculate_amount_hours(Date.today.month, Date.today.year), 'hour', 'hours') %>---------------------</p>
+  <!-- pluralize hace q si es 1 la cantidad t ponga el singular(primer caso hour) y 2º en caso plural-->
